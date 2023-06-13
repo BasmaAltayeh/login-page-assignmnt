@@ -19,13 +19,10 @@ login page design using angular and angular material
 
 * ng serve
 * open localhost and go to /login
-```
 
 ## Authors
 
-ex. Basma altayeh  
-
-
+Basma altayeh  
 
 ## Acknowledgments
 
