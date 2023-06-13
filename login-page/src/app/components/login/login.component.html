@@ -1,0 +1,22 @@
+<div class="card-container">
+<mat-card class="login-card">
+    <mat-card-content>
+        <img class="logo" src="https://avatars.githubusercontent.com/u/124091983" alt="Tamatem logo">
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email" name="email">
+                <mat-error *ngIf="checkError('email', 'required')">Email is required</mat-error>
+                <mat-error *ngIf="checkError('email', 'email')">Email is not Valid</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" formControlName="password" name="password">
+                <mat-error *ngIf="checkError('password', 'required')">Password is required</mat-error>
+                <mat-error *ngIf="checkError('password', 'minlength')">password must be at least 8 characters</mat-error>
+            </mat-form-field>
+            <button [disabled]="!loginForm.valid" type="submit" mat-raised-button color="primary" class="login-btn">Login</button>
+        </form>
+    </mat-card-content>
+  </mat-card>
+</div>

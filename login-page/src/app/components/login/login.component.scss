@@ -1,0 +1,109 @@
+//general card style for desktop
+::ng-deep .card-container{
+    background: #EFEFEF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    border-radius: 4px;
+    .login-card{
+        background-color: white;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 4px;
+        font-size: 16px;
+        line-height: 24px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 768px;
+        height: calc(100vh - 130px);
+        width: 768px;
+        max-height: 950px;
+        min-height:600px;
+        mat-card-content{
+            .logo{
+                display: block;
+                width: 128px;
+                margin: 0 auto 16px;                    
+            }
+            .login-form{
+                display: flex;
+                flex-direction: column;
+                mat-form-field{
+                    width: 328px;
+                }
+                mat-error{
+                    font: normal normal normal 12px/16px Roboto;
+                    letter-spacing: 0.4px;
+                    color: #B00020;
+                }
+                mat-label{
+                    font: normal normal normal 16px Roboto;
+                    letter-spacing: 0.4px;
+                    color: #B00020;
+                }
+                .mdc-notched-outline > * {
+                    border-color: #0000001F !important;
+                  }
+                .mdc-text-field--invalid .mdc-notched-outline > * {
+                    border-color: #B00020 !important;
+                    border-width: 2px;
+                }
+            }
+        }
+        .login-btn{
+            background: #C3001E 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #00000029;
+            border-radius: 4px;
+            width: 98px;
+            height: 36px;
+            text-align: left;
+            font: normal normal medium 14px/16px Roboto;
+            letter-spacing: 1.25px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            margin-left: auto;
+        }
+    }
+}
+
+ /* For mobile phones: */
+@media only screen and (max-width: 768px) {
+    .card-container{
+        .login-card{
+            max-width: none;
+            min-width: fit-content;
+            width: calc(100% - 60px);
+            height: auto;
+            padding: 22px 21px;
+            min-height:auto;
+            mat-card-content{
+                padding: 0;
+                width: 328px;
+                mat-form-field{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//screens less than 380px width
+@media only screen and (max-width: 380px) {
+    .card-container{
+        .login-card{
+            mat-card-content{
+                padding: 0;
+                width: 100%;
+                .login-form{
+                    mat-form-field{
+                        width: 100%; 
+                    }
+                }
+            }
+        }
+    }
+}
